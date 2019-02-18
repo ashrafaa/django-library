@@ -27,4 +27,5 @@ urlpatterns = [
     path('delete/<int:pk>', views.ContactDelete.as_view(), name='contact_delete'),
     path('catalog/', include('catalog.urls')),
     path('', RedirectView.as_view(url='/catalog/', permanent=True)),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
